@@ -9,11 +9,23 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: Scaffold(
-      appBar: AppBar(title: Text("I Am Poor",style: TextStyle(fontWeight: FontWeight.bold),),),
-      body: Center(
-        child: Image(image: AssetImage('assets/Coal.png')),
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Color(0xff333132),
+          centerTitle: true,
+          title: Text(
+            "I Am Poor",
+            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white),
+          ),
+        ),
+        body: Center(
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Image(image: AssetImage('assets/coal.png')),
+          ),
+        ),
       ),
-    ),);
+    );
   }
 }
